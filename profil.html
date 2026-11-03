@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JEJE 💙 | Profil</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #dff7ff,
+                #b8e8ff,
+                #f0fbff
+            );
+            color: #245b78;
+        }
+
+        nav {
+            padding: 18px 7%;
+            background: rgba(255,255,255,.95);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            box-shadow: 0 5px 20px rgba(20,120,180,.15);
+        }
+
+        .logo {
+            color: #168bd1;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #17638d;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 25px;
+        }
+
+        nav a:hover {
+            background: #55c5f7;
+            color: white;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 60px 25px;
+        }
+
+        .form-box {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(20,120,180,.18);
+        }
+
+        h1 {
+            text-align: center;
+            color: #168bd1;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #286d8e;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px 16px;
+            border: 2px solid #bce8fa;
+            border-radius: 15px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #42b9f5;
+            box-shadow: 0 0 10px rgba(66,185,245,.2);
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            padding: 14px;
+            margin-top: 30px;
+            background: #42b9f5;
+            color: white;
+            border-radius: 25px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #168bd1;
+            transform: scale(1.03);
+        }
+
+        .home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #168bd1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media(max-width:750px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            JEJE 💙
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    🏠 Home
+                </a>
+            </li>
+
+            <li>
+                <a href="detail.html">
+                    ✨ Tentang Aku
+                </a>
+            </li>
+
+            <li>
+                <a href="detail2.html">
+                    🌸 Hobi
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    👤 Profil
+                </a>
+            </li>
+
+            <li>
+                <a href="profil-tampil.html">
+                    💌 Data Profil
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h1>
+                👤 Profil JEJE 💙
+            </h1>
+
+            <form id="profilForm">
+
+                <label>
+                    NIM
+                </label>
+
+                <input
+                    type="text"
+                    id="nim"
+                    placeholder="Masukkan NIM"
+                    required
+                >
+
+
+                <label>
+                    Nama
+                </label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Masukkan Nama"
+                    required
+                >
+
+
+                <label>
+                    Alamat
+                </label>
+
+                <input
+                    type="text"
+                    id="alamat"
+                    placeholder="Masukkan Alamat"
+                    required
+                >
+
+
+                <label>
+                    Hobi
+                </label>
+
+                <input
+                    type="text"
+                    id="hobi"
+                    placeholder="Masukkan Hobi"
+                    required
+                >
+
+
+                <label>
+                    Instagram
+                </label>
+
+                <input
+                    type="text"
+                    id="instagram"
+                    placeholder="@instagram"
+                >
+
+
+                <button type="submit">
+                    Simpan Profil 💙
+                </button>
+
+            </form>
+
+            <a
+                href="index.html"
+                class="home"
+            >
+                ← Kembali ke Home
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        document
+        .getElementById("profilForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const dataProfil = {
+
+                nim:
+                document.getElementById("nim").value,
+
+                nama:
+                document.getElementById("nama").value,
+
+                alamat:
+                document.getElementById("alamat").value,
+
+                hobi:
+                document.getElementById("hobi").value,
+
+                instagram:
+                document.getElementById("instagram").value
+
+            };
+
+
+            localStorage.setItem(
+                "dataProfil",
+                JSON.stringify(dataProfil)
+            );
+
+
+            window.location.href =
+                "profil-tampil.html";
+
+        });
+
+    </script>
+
+</body>
+</html>

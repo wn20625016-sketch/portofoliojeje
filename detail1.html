@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JEJE 💙 | Tentang Aku</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg,#e0f7ff,#b8e8ff,#f5fcff);
+            color: #245b78;
+        }
+
+        nav {
+            padding: 18px 7%;
+            background: rgba(255,255,255,.95);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            box-shadow: 0 5px 20px rgba(20,120,180,.15);
+        }
+
+        .logo {
+            color: #168bd1;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #17638d;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 25px;
+        }
+
+        nav a:hover {
+            background: #55c5f7;
+            color: white;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 7%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #168bd1;
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .about {
+            background: white;
+            padding: 35px;
+            border-radius: 30px;
+
+            box-shadow: 0 12px 30px rgba(20,120,180,.15);
+
+            line-height: 1.9;
+            font-size: 18px;
+
+            margin-bottom: 45px;
+        }
+
+        .about strong {
+            color: #168bd1;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 12px;
+            border-radius: 25px;
+
+            box-shadow: 0 10px 25px rgba(20,120,180,.15);
+
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+
+        .card img {
+            width: 100%;
+            height: 260px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+        }
+
+        .card p {
+            text-align: center;
+            padding: 13px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 14px 23px;
+            margin: 6px;
+
+            background: #42b9f5;
+            color: white;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #168bd1;
+            transform: translateY(-5px);
+        }
+
+        .pink {
+            background: #ff8fc7;
+        }
+
+        .pink:hover {
+            background: #ec65a9;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 30px;
+            background: white;
+            text-align: center;
+        }
+
+        @media(max-width:750px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            JEJE 💙
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    🏠 Home
+                </a>
+            </li>
+
+            <li>
+                <a href="detail1.html">
+                    ✨ Tentang Aku
+                </a>
+            </li>
+
+            <li>
+                <a href="detail2.html">
+                    🌸 Hobi
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    👤 Profil
+                </a>
+            </li>
+
+            <li>
+                <a href="profil-tampil.html">
+                    💌 Data Profil
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="container">
+
+        <h1>
+            ✨ Tentang JEJE ✨
+        </h1>
+
+
+        <div class="about">
+
+            <p>
+                Halo! Namaku
+                <strong>JEJE</strong> 💙
+            </p>
+
+            <br>
+
+            <p>
+                Aku adalah seseorang yang suka menikmati
+                berbagai hal sederhana dalam kehidupan.
+                Aku senang mengabadikan momen melalui foto
+                dan membuat sesuatu yang kreatif.
+            </p>
+
+            <br>
+
+            <p>
+                Website ini dibuat sebagai portfolio sederhana
+                untuk memperkenalkan diriku, hobiku, serta
+                beberapa foto favoritku. 🌸
+            </p>
+
+        </div>
+
+
+        <!-- 3 FOTO -->
+
+        <div class="gallery">
+
+            <div class="card">
+
+                <img
+                    src="cute.jpg"
+                    alt="Foto JEJE"
+                >
+
+                <p>
+                    💙 Cute Moment
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="happy day.jpg"
+                    alt="Foto JEJE"
+                >
+
+                <p>
+                    ✨ Happy Day
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="je1.jpg"
+                    alt="Foto JEJE"
+                >
+
+                <p>
+                    🫧 Beautiful Memory
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGASI -->
+
+        <div class="buttons">
+
+            <a
+                href="index.html"
+                class="btn"
+            >
+                🏠 Kembali ke Home
+            </a>
+
+            <a
+                href="detail2.html"
+                class="btn pink"
+            >
+                🌸 Lanjut ke Hobi
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        💙 JEJE Cute Portfolio 💙
+    </footer>
+
+</body>
+</html>

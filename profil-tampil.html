@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JEJE 💙 | Data Profil</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #dff7ff,
+                #b8e8ff,
+                #f0fbff
+            );
+
+            color: #245b78;
+        }
+
+        nav {
+            padding: 18px 7%;
+            background: rgba(255,255,255,.95);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            box-shadow: 0 5px 20px rgba(20,120,180,.15);
+        }
+
+        .logo {
+            color: #168bd1;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #17638d;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 25px;
+        }
+
+        nav a:hover {
+            background: #55c5f7;
+            color: white;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            padding: 65px 25px;
+        }
+
+        .profile-box {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+
+            box-shadow:
+                0 15px 35px
+                rgba(20,120,180,.18);
+
+            animation: muncul 1s ease;
+        }
+
+        h1 {
+            text-align: center;
+            color: #168bd1;
+            margin-bottom: 35px;
+        }
+
+        .data {
+            background: #eefaff;
+            padding: 18px;
+            border-radius: 18px;
+            margin: 13px 0;
+            border-left: 5px solid #42b9f5;
+        }
+
+        .data span {
+            display: block;
+            font-size: 13px;
+            color: #5790a9;
+            margin-bottom: 5px;
+        }
+
+        .data strong {
+            font-size: 18px;
+            color: #225f7c;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            background: #42b9f5;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #168bd1;
+            transform: scale(1.06);
+        }
+
+        .pink {
+            background: #ff8fc7;
+        }
+
+        .pink:hover {
+            background: #ec65a9;
+        }
+
+        .empty {
+            text-align: center;
+            color: #6c9bb0;
+            padding: 30px;
+        }
+
+        @keyframes muncul {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @media(max-width:750px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            JEJE 💙
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    🏠 Home
+                </a>
+            </li>
+
+            <li>
+                <a href="detail.html">
+                    ✨ Tentang Aku
+                </a>
+            </li>
+
+            <li>
+                <a href="detail2.html">
+                    🌸 Hobi
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    👤 Profil
+                </a>
+            </li>
+
+            <li>
+                <a href="profil-tampil.html">
+                    💌 Data Profil
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="container">
+
+        <div class="profile-box">
+
+            <h1>
+                💌 Data Profil JEJE 💌
+            </h1>
+
+            <div id="dataContainer"></div>
+
+
+            <div class="buttons">
+
+                <a
+                    href="profil.html"
+                    class="btn"
+                >
+                    ✏️ Edit Profil
+                </a>
+
+                <a
+                    href="detail2.html"
+                    class="btn pink"
+                >
+                    🌸 Kembali ke Hobi
+                </a>
+
+                <a
+                    href="index.html"
+                    class="btn"
+                >
+                    🏠 Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const data =
+            JSON.parse(
+                localStorage.getItem("dataProfil")
+            );
+
+
+        const container =
+            document.getElementById("dataContainer");
+
+
+        if (data) {
+
+            container.innerHTML = `
+
+                <div class="data">
+
+                    <span>
+                        NIM
+                    </span>
+
+                    <strong>
+                        ${data.nim}
+                    </strong>
+
+                </div>
+
+
+                <div class="data">
+
+                    <span>
+                        Nama
+                    </span>
+
+                    <strong>
+                        ${data.nama}
+                    </strong>
+
+                </div>
+
+
+                <div class="data">
+
+                    <span>
+                        Alamat
+                    </span>
+
+                    <strong>
+                        ${data.alamat}
+                    </strong>
+
+                </div>
+
+
+                <div class="data">
+
+                    <span>
+                        Hobi
+                    </span>
+
+                    <strong>
+                        ${data.hobi}
+                    </strong>
+
+                </div>
+
+
+                <div class="data">
+
+                    <span>
+                        Instagram
+                    </span>
+
+                    <strong>
+                        ${data.instagram || "-"}
+                    </strong>
+
+                </div>
+
+            `;
+
+        } else {
+
+            container.innerHTML = `
+
+                <div class="empty">
+
+                    <h2>
+                        Belum ada data 💙
+                    </h2>
+
+                    <br>
+
+                    <p>
+                        Silakan isi profil JEJE terlebih dahulu.
+                    </p>
+
+                </div>
+
+            `;
+
+        }
+
+    </script>
+
+</body>
+</html>

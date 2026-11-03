@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JEJE 💙 | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #dff7ff, #b8e8ff, #f5fcff);
+            color: #245b78;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            padding: 18px 7%;
+            background: rgba(255,255,255,0.95);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 5px 20px rgba(20,120,180,0.15);
+        }
+
+        .logo {
+            color: #168bd1;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #17638d;
+            font-weight: bold;
+
+            padding: 10px 15px;
+            border-radius: 25px;
+
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #55c5f7;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 85vh;
+            padding: 70px 10%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            animation: masuk 1s ease;
+        }
+
+        .welcome {
+            color: #42aede;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            color: #168bd1;
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            line-height: 1.8;
+            font-size: 18px;
+            color: #4d7c91;
+        }
+
+        /* BUTTON */
+        .button-group {
+            margin-top: 30px;
+
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 14px 23px;
+
+            background: #42b9f5;
+            color: white;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            box-shadow: 0 8px 18px rgba(42,155,215,0.2);
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #168bd1;
+            transform: translateY(-5px) scale(1.04);
+        }
+
+        .pink {
+            background: #ff8fc7;
+        }
+
+        .pink:hover {
+            background: #ec65a9;
+        }
+
+        .purple {
+            background: #8d79e8;
+        }
+
+        .purple:hover {
+            background: #6955ce;
+        }
+
+        /* FOTO UTAMA */
+        .hero-photo {
+            width: 350px;
+            height: 350px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+            border: 10px solid white;
+
+            box-shadow: 0 15px 35px rgba(20,120,180,0.25);
+
+            animation: melayang 3s ease-in-out infinite;
+        }
+
+        /* MENU */
+        .menu-section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .menu-section h2 {
+            color: #168bd1;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .menu-section > p {
+            color: #5d8599;
+            margin-bottom: 35px;
+        }
+
+        .menu-container {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: white;
+            padding: 30px 20px;
+
+            border-radius: 30px;
+
+            box-shadow: 0 10px 25px rgba(20,120,180,0.13);
+
+            transition: 0.4s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-12px) rotate(1deg);
+        }
+
+        .menu-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .menu-card h3 {
+            color: #168bd1;
+            margin-bottom: 10px;
+        }
+
+        .menu-card p {
+            line-height: 1.6;
+            color: #62879a;
+            margin-bottom: 18px;
+        }
+
+        /* GALERI */
+        .gallery-section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            color: #168bd1;
+            font-size: 35px;
+            margin-bottom: 35px;
+        }
+
+        .gallery {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 12px;
+
+            border-radius: 25px;
+
+            box-shadow: 0 10px 25px rgba(20,120,180,0.15);
+
+            transition: 0.4s;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+        }
+
+        .photo-card p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #367895;
+        }
+
+        /* EMOJI */
+        .emoji {
+            position: fixed;
+            bottom: -50px;
+            font-size: 25px;
+
+            z-index: -1;
+
+            animation: naik 8s linear infinite;
+        }
+
+        .emoji1 {
+            left: 10%;
+        }
+
+        .emoji2 {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .emoji3 {
+            left: 55%;
+            animation-delay: 4s;
+        }
+
+        .emoji4 {
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        footer {
+            margin-top: 50px;
+
+            text-align: center;
+
+            padding: 30px;
+
+            background: white;
+
+            color: #508099;
+        }
+
+        @keyframes masuk {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes melayang {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes naik {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media(max-width:850px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-photo {
+                width: 280px;
+                height: 280px;
+            }
+
+            .hero-text h1 {
+                font-size: 50px;
+            }
+
+            .button-group {
+                justify-content: center;
+            }
+
+            .menu-container,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="logo">
+            JEJE 💙
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    🏠 Home
+                </a>
+            </li>
+
+            <!-- SUDAH PAKAI detail1.html -->
+            <li>
+                <a href="detail1.html">
+                    ✨ Tentang Aku
+                </a>
+            </li>
+
+            <li>
+                <a href="detail2.html">
+                    🌸 Hobi
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    👤 Profil
+                </a>
+            </li>
+
+            <li>
+                <a href="profil-tampil.html">
+                    💌 Data Profil
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ANIMASI -->
+    <div class="emoji emoji1">💙</div>
+    <div class="emoji emoji2">✨</div>
+    <div class="emoji emoji3">🫧</div>
+    <div class="emoji emoji4">☁️</div>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <div class="welcome">
+                ✨ Welcome to My Website ✨
+            </div>
+
+            <h1>
+                Hai, Aku JEJE! 💙
+            </h1>
+
+            <h2>
+                My Cute Personal Portfolio 🌸
+            </h2>
+
+            <p>
+                Selamat datang di website pribadiku!
+                Di sini kamu bisa mengenal aku lebih dekat,
+                melihat foto-fotoku, mengetahui hobiku,
+                dan melihat profilku.
+            </p>
+
+
+            <div class="button-group">
+
+                <!-- DETAIL 1 -->
+                <a href="detail1.html" class="btn">
+                    ✨ Tentang Aku
+                </a>
+
+                <!-- DETAIL 2 -->
+                <a href="detail2.html" class="btn pink">
+                    🌸 Hobi JEJE
+                </a>
+
+                <!-- PROFIL -->
+                <a href="profil.html" class="btn purple">
+                    👤 Profil
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <img
+            src="profil.jpg"
+            class="hero-photo"
+            alt="Foto JEJE"
+        >
+
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu-section">
+
+        <h2>
+            💙 Kenalan Lebih Dekat dengan JEJE
+        </h2>
+
+        <p>
+            Klik salah satu tombol untuk membuka halaman lainnya ✨
+        </p>
+
+
+        <div class="menu-container">
+
+
+            <!-- DETAIL 1 -->
+            <div class="menu-card">
+
+                <div class="menu-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Tentang Aku
+                </h3>
+
+                <p>
+                    Kenalan lebih dekat dengan JEJE
+                    dan lihat foto-foto favoritku.
+                </p>
+
+                <a
+                    href="detail1.html"
+                    class="btn"
+                >
+                    Buka Detail 1 →
+                </a>
+
+            </div>
+
+
+            <!-- DETAIL 2 -->
+            <div class="menu-card">
+
+                <div class="menu-icon">
+                    🌸
+                </div>
+
+                <h3>
+                    Hobi & Harapan
+                </h3>
+
+                <p>
+                    Lihat hobiku, hal yang aku sukai,
+                    dan harapan yang ingin aku capai.
+                </p>
+
+                <a
+                    href="detail2.html"
+                    class="btn pink"
+                >
+                    Buka Detail 2 →
+                </a>
+
+            </div>
+
+
+            <!-- PROFIL -->
+            <div class="menu-card">
+
+                <div class="menu-icon">
+                    👤
+                </div>
+
+                <h3>
+                    Profil JEJE
+                </h3>
+
+                <p>
+                    Isi data profil dan lihat
+                    data profil yang sudah disimpan.
+                </p>
+
+                <a
+                    href="profil.html"
+                    class="btn purple"
+                >
+                    Buka Profil →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALERI -->
+    <section class="gallery-section">
+
+        <h2>
+            📸 Foto-Foto JEJE
+        </h2>
+
+        <div class="gallery">
+
+            <div class="photo-card">
+
+                <img
+                    src="myfaforit.jpg"
+                    alt="Foto JEJE 1"
+                >
+
+                <p>
+                    💙 My Favorite Photo
+                </p>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img
+                    src="happymoment.jpg"
+                    alt="Foto JEJE 2"
+                >
+
+                <p>
+                    ✨ Happy Moment
+                </p>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img
+                    src="beautiful.jpg"
+                    alt="Foto JEJE 3"
+                >
+
+                <p>
+                    🫧 Beautiful Memory
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        💙 © 2026 JEJE | My Cute Portfolio 💙
+    </footer>
+
+</body>
+</html>
